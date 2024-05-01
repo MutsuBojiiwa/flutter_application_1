@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'second.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -164,6 +166,14 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ResetButton(callback: _resetCounter),
+            SizedBox(height: 50,),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SecondPage()));
+              },
+              child: Text("Go to Next Page"),
+            ),
           ],
         ),
       ),
